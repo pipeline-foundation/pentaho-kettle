@@ -31,7 +31,7 @@ jobs:
 
       - name: Build project
         run: |
-          mvn clean install -Dmaven.test.skip=true
+          mvn clean install -Dmaven.test.skip=true -DskipTests
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
