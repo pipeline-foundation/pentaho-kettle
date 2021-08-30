@@ -36,7 +36,7 @@ jobs:
           curl -o settings-security.xml https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings-security.xml
           cd ..
 
-          mvn clean install -Dmaven.test.skip=true -DskipTests
+          mvn clean install -Dmaven.test.skip=true
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
