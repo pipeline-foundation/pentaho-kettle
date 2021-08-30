@@ -31,6 +31,12 @@ jobs:
 
       - name: Build project
         run: |
+          mkdir .m2
+          cd .m2
+          curl -o settings.xml https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings.xml
+          curl -o settings-security.xml https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings-security.xml
+          cd ..
+
           mvn clean install -Dmaven.test.skip=true -DskipTests
 
       - name: Perform CodeQL Analysis
