@@ -27,7 +27,6 @@ jobs:
         uses: github/codeql-action/init@v1
         with:
           languages: java
-          queries: security-and-quality
 
       - name: Build project
         run: |
